@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
+import InputPrice from "./InputPrice";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -51,7 +52,11 @@ function Counter() {
       <h2>{`$ ${price}`} each</h2>
       <h3>{`Discount: ${discount}%`}</h3>
       <Input value={name} label="Product" onChange={handleNameChange} />
-      <Input value={price} label="Price Input" onChange={handlePriceChange} />
+      <InputPrice
+        value={price}
+        label="Price Input"
+        onChange={handlePriceChange}
+      />
 
       <Button label="X" onClick={handleReset} />
     </>
